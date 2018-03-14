@@ -1,7 +1,7 @@
 package cn.e3mall.controller;
 
 import java.util.List;
-
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +27,11 @@ public class ItemCatController {
 	public List<TreeNode> getItemCatList(@RequestParam(name="id",defaultValue="0")long parentId){
 		List<TreeNode> list = itemCatService.getItemCatList(parentId);		
 		return list;
+	}
+	
+	@Test
+	public void test(){
+		System.out.println("GG");
 	}
 	
 }
